@@ -120,10 +120,6 @@ RUN mkdir -p ${GOPATH}/src/github.com/grpc-ecosystem/grpc-gateway && \
     install -Ds /grpc-gateway-out/protoc-gen-openapiv2 /out/usr/bin/protoc-gen-openapiv2 && \
     mkdir -p /out/usr/include/protoc-gen-openapiv2/options && \
     install -D $(find ./protoc-gen-openapiv2/options -name '*.proto') -t /out/usr/include/protoc-gen-openapiv2/options
-    # mkdir -p /out/usr/include/google/api && \
-    # install -D $(find ./third_party/googleapis/google/api -name '*.proto') -t /out/usr/include/google/api && \
-    # mkdir -p /out/usr/include/google/rpc && \
-    # install -D $(find ./third_party/googleapis/google/rpc -name '*.proto') -t /out/usr/include/google/rpc
 
 ARG PROTOC_GEN_PARQUET_VERSION
 RUN mkdir -p ${GOPATH}/src/github.com/atoulme/protoc-gen-parquet && \
